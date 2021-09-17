@@ -2,13 +2,13 @@
 //take the letter a and output the morse code which is .-
 
 import { translator } from "./translator";
-
+import {morseCode} from "./data";
 //it should
 //give an error when
 
 //it should
 
-describe("testing transformInputToArray()", ()=> {
+xdescribe("testing transformInputToArray()", ()=> {
     //valid test case
     it("Should take an input of 'abcd' and give ['a', 'b', 'c', 'd']", () => {
         //arrange
@@ -18,7 +18,7 @@ describe("testing transformInputToArray()", ()=> {
         //assert -> test will pass or fail
         expect(result).toBe(['a', 'b', 'c', 'd']);
     })
-}
+}),
 
 
 describe("testing translator()", ()=> {
@@ -32,7 +32,7 @@ describe("testing translator()", ()=> {
         expect(result).toBe(".-");
     })
 
-    it("Should take an input of a or A and return .-", () => {
+    it("Should take an input of a or A and return '.-'", () => {
         //arrange
         let result;
         //act
@@ -58,10 +58,10 @@ describe("testing translator()", ()=> {
         //assert -> test will pass or fail
     expect(result).toBe("Invalid, please try again");
     })
-}
+}),
 
 
-describe("testing morseOutput()", ()=> {
+xdescribe("testing morseOutput()", ()=> {
     //valid test case
     it(" Should join together an array of morse coded inputs", () => {
         //arrange
@@ -84,4 +84,4 @@ describe("testing morseOutput()", ()=> {
 
       
 
-
+})
