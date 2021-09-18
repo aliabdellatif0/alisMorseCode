@@ -5,8 +5,8 @@ import { morseCode } from "./data"
 export const translator = (letter) => {
 
     let position = alphabet.indexOf(letter)
-    let morsePosition = morseCode[position]
-    return morsePosition
+    let morseTranslation = morseCode[position]
+    return morseTranslation
 }
 
 
@@ -24,5 +24,12 @@ export const transformInputToArray = (str) => {
 }
 
 
+export const morseOutput = (array) => {
+    let morse = ""
+    for(let i=0; i<array.length; i++){
+        morse += translator(array[i])
+    }
 
-console.log(transformInputToArray("hello"))
+    return morse
+
+}
