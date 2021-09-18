@@ -3,12 +3,13 @@
 
 import { translator } from "./translator";
 import {morseCode} from "./data";
+import {transformInputToArray} from "./translator"
 //it should
 //give an error when
 
 //it should
 
-xdescribe("testing transformInputToArray()", ()=> {
+describe("testing transformInputToArray()", ()=> {
     //valid test case
     it("Should take an input of 'abcd' and give ['a', 'b', 'c', 'd']", () => {
         //arrange
@@ -16,9 +17,9 @@ xdescribe("testing transformInputToArray()", ()=> {
         //act
         result = transformInputToArray("abcd");
         //assert -> test will pass or fail
-        expect(result).toBe(['a', 'b', 'c', 'd']);
+        expect(result).toStrictEqual([ 'a', 'b', 'c', 'd' ]);
     })
-}),
+})
 
 
 describe("testing translator()", ()=> {

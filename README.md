@@ -6,3 +6,7 @@ A MORSE code translator where input
 
 ## Sub Title
 
+
+
+Pseduocode ->
+

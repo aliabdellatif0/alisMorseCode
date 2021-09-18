@@ -9,3 +9,20 @@ export const translator = (letter) => {
     return morsePosition
 }
 
+
+
+export const transformInputToArray = (str) => {
+    let stringToIterate = str;
+    let arr = [];
+    for(let i=0; i< stringToIterate.length; i++){
+        arr[i] = stringToIterate.charAt(i);
+    
+    }
+    
+
+    return arr
+}
+
+
+
+console.log(transformInputToArray("hello"))
