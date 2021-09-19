@@ -2,7 +2,7 @@
   "name": "yes",
   "version": "1.0.0",
   "description": "Morse Code Translator",
-  "main": "translator.js",
+  "main": "index.js",
   "scripts": {
     "test": "jest js --watch",
     "coverage": "jest --coverage js"
