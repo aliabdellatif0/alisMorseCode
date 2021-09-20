@@ -6,6 +6,7 @@ export const translator = (letter) => {
 
     let position = alphabet.indexOf(letter)
     let morseTranslation = morseCode[position]
+    
     return morseTranslation
 }
 
