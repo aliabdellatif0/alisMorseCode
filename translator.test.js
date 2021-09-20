@@ -4,6 +4,7 @@
 import { translator } from "./translator";
 import {morseCode} from "./data";
 import {transformInputToArray} from "./translator"
+import {morseOutput} from "./translator"
 //it should
 //give an error when
 
@@ -62,24 +63,24 @@ describe("testing translator()", ()=> {
 }),
 
 
-xdescribe("testing morseOutput()", ()=> {
+describe("testing morseOutput()", ()=> {
     //valid test case
-    it(" Should join together an array of morse coded inputs", () => {
+    it(" Should join together an array of letters and output their morse in string form", () => {
         //arrange
-        let result = morseOutput([".-", ".--.", "..."])
+        let result = morseOutput(["a", "p", "s"])
         //act
         
         //assert -> test will pass or fail
-        expect(result).toBe("aps");
+        expect(result).toBe(".-.--....");
     })
 
     it("Should use a slash as MORSE code for spaces inputted", () => {
         //arrange
-        let result = morseOutput([".-", ".--.", " ", ".---", ".-."])
+        let result = morseOutput(["a", "p", " ", "j", "r"])
         //act
         
         //assert -> test will pass or fail
-        expect(result).toBe("ap/jr");
+        expect(result).toBe(".-.--. / .---.-.");
     })
 
 
