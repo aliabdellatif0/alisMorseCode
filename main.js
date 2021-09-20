@@ -8,7 +8,7 @@ import {morseOutput, morseOutputReverse} from "./translator.js"
 
 const theInput = document.querySelector("#input")
 const theButton = document.querySelector("#button")
-const translationValue = document.querySelector(".translationValue")
+const translationValue = document.querySelector(".translator__presenter--output")
 
 // theInput.addEventListener("click", () =>{
 //     // let theCode = morseOutput(transformInputToArray(theInput.innertext))
