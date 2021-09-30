@@ -1,52 +1,66 @@
 # Review
-​
+
 ## Goals
-​
+
 1. Working morse code translator - done
-2. Practice using TDD - Got some practice but they all fail ❌
-3. Application of what you're learning (pure functions etc.) - Clean functions, and the app works ✔
-​
+   - english to morse - done
+   - morse to english - close
+2. Practice using TDD - not done
+   - Got some practice writing tests first but 3 pass 4 fail at the moment
+   - You will need to get all your tests passing
+3. Application of what you're learning (pure functions etc.) - Clean functions, and the app works - done
+   ​
+
 ## Specification
+
 ​
-- Translator functions and Unit tests to be written in separate files. Functions to be brought into the main.js and unit test files
-  - Has written tests which I'm sure worked initially. Unfortunately didn't follow the TDD cycle, as the test have become broken over time and now none of them pass.
-- Readme
-  - Technically has a README although there is no information here about the application.
+
+- Translator functions and Unit tests to be written in separate files. Functions to be brought into the main.js and unit test files - done
+  - Has written tests and pure functions in separate files that have been brought into the main which is great.
+- Readme - kinda done
+  - Technically has a README although there it needs a bit of polishing.
 - 10 commits during development
   - \>10 commits done. Judging by commit comments, they are of value.
-- Mobile first/Responsive
-  - Responsive and looks nice! Will break if you try to translate too much though.
-- No tutorials
+- Mobile first/Responsive - done
+  - Responsive and looks nice! Handles a large sentence translation
+- No tutorials - done
   - This work looks original
-​
+    ​
+
 ## Overall
+
 ​
-A very nice morse code translator which works well, provides some feedback if the character you type isn't able to be translate and the styling isn't too bad either.
+In terms of JS you have separated your files which is great. I like how you have began to strip your translator into different functions that are pure and you have started to test :).
 ​
-Overall, very impressive, only let down by the tests not working.
+You have started the extension which is great I just think you need to work on a couple of things with it
 ​
+
 ## To work on
-​
-Follow the TDD cycle more closely. It looks to me like you changed both the inputs and output of your translate function which would probably require a rewrite of your tests. On the other side you can make this work without changing your tests by passing the `value` of the `<input>` directly into the translate function.
-​
-FROM:
-​
+
+### TDD​
+
+Follow the TDD cycle more closely you want to get all of your tests passing before you move on.
+
+Your translator functions, pointers to get it to pass.
+
 ```js
-translateBtn.addEventListener("click", (event) => {
-  event.preventDefault();
-  textOutput.innerHTML = translateToMorse(textInput);
-});
+export const translator = letter => {
+  // alphabet is a lowercase array
+  // the letter might be A or a how can i make sure it is a?
+  let position = alphabet.indexOf(letter);
+  // If index of can't find something it returns -1
+  // What if the position is -1?
+  let morseTranslation = morseCode[position];
+  return morseTranslation;
+};
 ```
-​
-TO:
-​
-```js
-translateBtn.addEventListener("click", (event) => {
-  event.preventDefault();
-  textOutput.innerHTML = translateToMorse(textInput.value);
-});
-```
-​
-You can also add the wrapping `<p></p>` tags after you have called the function, or create a another wrapping function in order to achieve this functionality as *technically* adding `<p></p>` tags aren't included in having to translate english to morse so it shouldn't live in this function.
-​
-Consider adding these in after you've called the function.
+
+### House keeping
+
+- Tidy up code base
+  - scss files in a scss folder
+  - js files in js folder
+  - delete commented out code
+- Style it
+- Jazz up your readme
+- Complete the extension
