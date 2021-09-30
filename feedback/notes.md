@@ -57,6 +57,9 @@ export const translator = letter => {
 
 ### House keeping
 
+- You have node_modules on your git hub delete them
+  - Your package.json is your list dependencies
+  - You have a .gitignore but you must have added it afterwards.
 - Tidy up code base
   - scss files in a scss folder
   - js files in js folder
@@ -64,3 +67,5 @@ export const translator = letter => {
 - Style it
 - Jazz up your readme
 - Complete the extension
+
+Hey mate a lot of little things let me know if you want a hand or a further explanation.
